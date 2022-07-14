@@ -9,4 +9,4 @@ MediCareWizard aids the patients in need of a specialist’s examination or a me
 service by creating an easy to use, fast and immediate system to satisfy their needs,
 with the aim of guaranteeing a quality service and short waiting times within our
 diagnostic medical center.
-<img src="logo.png" width="128"/>
+<img src="logo.png" width="500"/>
