@@ -1,0 +1,85 @@
+body {
+    background-color: #A8DADC !important;
+    margin: 10px;
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* index.html */
+form > div > a {
+    text-decoration: none;
+}
+
+#resizedForm {
+    background-color: white;
+    width: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform : translate(-50%, -50%);
+
+    border-radius: 30px;
+    padding: 30px;
+}
+
+form > div > #medicareLogo {
+    width: 70%;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resizedForm .btn {
+    width: 40%;
+    margin: 10px;
+}
+
+/* userPage.html */
+nav > div > a > #medicareIcon {
+    display: inline;
+    width: 20%;
+}
+
+nav {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 20px;
+    width: 50%;
+}
+
+nav .nav-link{
+    padding-left: 40% !important;
+}
+
+nav #escIcon{
+    display: inline;
+    width: 20%;
+}
+
+.mainMenu{
+    background-color: white;
+    margin-top: 2%;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.secondMenu{
+    background-color: white;
+    margin-top: 2%;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+.form-select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Booked a {
+    text-decoration: none !important;
+}
