@@ -33,21 +33,30 @@
 
     <div class="mainMenu">
         <div class="mb-3">
-          <h2>Book an exam </h2>
+          <h2>Insert your data</h2>
         </div>
-        <div>
-        <input  placeholder="Name" type="name" class="name"  id="exampleName" aria-describedby="name"><br>
-        <input  placeholder="Surname" type="surname" class="surname" id="exampleSurname" aria-describedby="surname"><br>
-        <input  placeholder="Phone Number" type="phonenumber" class="phone" id="examplePhoneNumber" aria-describedby="PhoneNumber">
+        
+
+        <div class="mb-3">
+          <label for="exampleInputName" class="form-label">Name</label>
+          <input type="name" class="form-control" id="name">
+          <label for="exampleInputSurname" class="form-label">Surname</label>
+          <input type="surname" class="form-control" id="surname">
+          <label for="exampleInputName" class="form-label">PhoneNumber</label>
+          <input type="phonenumber" class="form-control" id="phonenumber">
+          <label for="exampleInputName" class="form-label">SSN</label>
+          <input type="SSN" class="form-control" id="SSN">
         </div>
-        <br>
-          <select class="form-select hour" aria-label="Default select example">
+        <div class="mb-3">
+          <h2>Choose your Appointment</h2>
+        </div>
+        
+        <select class="form-select hour" aria-label="Default select example">
             <option selected>Hour</option>
             <option value="morning">Morning (08:00-12:00)</option>
-            <option value="afternoon">Afternoon (12:00-18:00)</option>
             <option value="evening">Evening (18:00-20:00)</option>
             <option value="no preferences">No Preferences</option>
-          </select>
+        </select>
           
           <select class="form-select selectDay" aria-label="Default select example">
             <option selected>Select The Day</option>
@@ -63,11 +72,10 @@
         
           </select>
 
-    
-
           <div class="input-group">
             <button class="btn btn-outline-secondary" type="button" id="button-addon1">Reserve an exam</button>
           </div>
+        
     </div>
 
     
