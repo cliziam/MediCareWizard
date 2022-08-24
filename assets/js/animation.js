@@ -14,7 +14,7 @@
       
             $.ajax({
                 type: "POST",
-                url : "https://mrptcqlxba.execute-api.us-east-1.amazonaws.com/Dev/users",
+                url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
@@ -27,8 +27,8 @@
 
                     // save the session in js
                     sessionStorage.setItem('email', email);
-            
-                    var url = "https://s3.amazonaws.com/prodigit2.0/pages/userPage.html";
+                    
+                    var url = "https://s3.amazonaws.com/medicarewizard1/pages/userPage.html";
                     $(location).attr('href',url);
                 },
                 
@@ -47,7 +47,7 @@
       
             $.ajax({
                 type: "POST",
-                url : "https://mrptcqlxba.execute-api.us-east-1.amazonaws.com/Dev/users",
+                url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
