@@ -54,12 +54,12 @@
             'SSN': SSN,
             'hour': hour,
             'date':date,
-            'exams': exams
+            'examtype': exams
         };
 
         $.ajax({
             type: "POST",
-            url : "https://mrptcqlxba.execute-api.us-east-1.amazonaws.com/Dev/reservations",
+            url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
