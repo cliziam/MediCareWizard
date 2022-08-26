@@ -158,7 +158,8 @@
         var exams = $(".exams").children("option:selected").val();
 
         var data = {
-            'email': sessionStorage.getItem('email'),
+            //'email': sessionStorage.getItem('email'),
+            'email':'p@gmail.com',
             'name': name,
             'surname': surname,
             'phonenumber': phonenumber,
