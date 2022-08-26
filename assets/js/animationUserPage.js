@@ -2,9 +2,9 @@
     
     function sessionNameUser(){ /* Return the Session Name User*/
         if(sessionStorage.getItem('email')){
-            $('.mainMenu > .mb-3').append("Welcome " + sessionStorage.getItem('email'));
+            $('#welcome').append("Welcome " + sessionStorage.getItem('email'));
         } else {
-            $('.mainMenu > .mb-3').append('Should log-in...');
+            $('#welcome' ).append('Should log-in...');
         }
     }
 
@@ -118,11 +118,11 @@
     // remove seat
     $(".ReservationBooked").on("click", "#removeSeat", function(){
         var codeReservation = $(this).closest('tbody > tr').find("#codReservation").html();
-        var course = $(this).closest('tbody > tr').find("#course").html();
+        var examtype = $(this).closest('tbody > tr').find("#examtype").html();
 
         var data = {
             'codeReservation': codeReservation,
-            'course': course
+            'examtype': examtype
         }
 
         $.ajax({
@@ -135,7 +135,7 @@
 
             success: function () {
                 // clear form and show a success message
-                alert("Seat Removed");
+                alert("Exam Removed");
                 location.reload();
             },
             
@@ -158,8 +158,7 @@
         var exams = $(".exams").children("option:selected").val();
 
         var data = {
-            //'email': sessionStorage.getItem('email'),
-            'email':'p@gmail.com',
+            'email': sessionStorage.getItem('email'),
             'name': name,
             'surname': surname,
             'phonenumber': phonenumber,

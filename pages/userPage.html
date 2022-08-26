@@ -16,54 +16,69 @@
 
 <body>
     <nav class="navbar navbar-light">
-          <a class="navbar-brand" href="#">
-            <img src="../assets/img/medicareIcon.png" width="50" height="50" alt=""> MediCareWizard
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Logout </a>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/img/medicareIcon.png" width="50" height="50" alt=""> MediCareWizard
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Logout </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="mainMenu">
-        <div class="mb-3">
-          <h2>Insert your data</h2>
+        <div class="mb-3" id="welcome">
+          <h2>Reserve your Exam</h2>
         </div>
         
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Exam Type</th>
+              <th scope="col">Date</th>
+              <th scope="col">Hour</th>
+              <th scope="col">Seats available</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
 
         <div class="mb-3">
-          <label for="exampleInputName" class="form-label">Name</label>
-          <input type="name" class="form-control" id="name">
-          <label for="exampleInputSurname" class="form-label">Surname</label>
-          <input type="surname" class="form-control" id="surname">
-          <label for="exampleInputName" class="form-label">PhoneNumber</label>
-          <input type="phonenumber" class="form-control" id="phonenumber">
-          <label for="exampleInputName" class="form-label">SSN</label>
-          <input type="SSN" class="form-control" id="SSN">
+          <label for="name" class="form-label">Name</label>
+          <input  type="text" class="form-control" id="name" required="required">
+          <label for="surname" class="form-label">Surname</label>
+          <input required type="text" class="form-control" id="surname">
+          <label for="phonenumber" class="form-label">PhoneNumber</label>
+          <input required type="tel" class="form-control" id="phonenumber">
+          <label for="SSN" class="form-label">SSN</label>
+          <input required type="text" class="form-control" id="SSN">
         </div>
         <div class="mb-3">
           <h2>Choose your Appointment</h2>
         </div>
         
-        <select class="form-select hour" aria-label="Default select example">
-            <option selected>Hour</option>
+        <select required class="form-select hour" aria-label="Default select example">
             <option value="morning">Morning (08:00-12:00)</option>
-            <option value="evening">Evening (18:00-20:00)</option>
-            <option value="no preferences">No Preferences</option>
+            <option value="afternoon">Afternoon (12:00-16:00)</option>
+            <option value="evening">Evening (16:00-20:00)</option>
+            <option value="no preferences" selected>No Preferences</option>
         </select>
           
-          <select class="form-select selectDay" aria-label="Default select example">
+          <select required class="form-select selectDay" aria-label="Default select example">
             <option selected>Select The Day</option>
           </select>
           
-          <select class="form-select exams" aria-label="Default select example">
-            <option selected>Exam</option>
+          <select required class="form-select exams" aria-label="Default select example">
+            <option value="" disabled selected hidden>Exam</option>
             <option value="Nutritional Exam">Nutritional Exam</option>
             <option value="Paediatric Exam">Paediatric Exam</option>
             <option value="Cardiological Exam">Cardiological Exam</option>
@@ -77,6 +92,34 @@
           </div>
         
     </div>
+
+
+    <div class="secondMenu Booked">
+      <div class="mb-3">
+        <h3>Your Appointment</h3>
+      </div>
+
+      <table class="table ReservationBooked">
+          <thead>
+            <tr>
+              <th scope="col">Code Reservation</th>
+              <th scope="col">Email</th>
+              <th scope="col">Type of Exam</th>
+              <th scope="col">Name</th>
+              <th scope="col">Surname</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">SSN</th>
+              <th scope="col">Hour</th>
+              <th scope="col">Date</th>
+              <th scope="col">Remove</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+  </div>
+
 
     
 
