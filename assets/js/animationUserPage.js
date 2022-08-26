@@ -8,20 +8,25 @@
         }
     }
 
-    $(".selectDay").on("click", function(){
-        var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    $(".selectDay").one("click", function(){
+        var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         let today = new Date()
         var dt = new Date(today);
         var increase_per_day = 0;
         if($(".selectDay").children().length > 0 && $(".selectDay").children().length < day.length){
-            for(var i = dt.getDay()-1; i < day.length; i++){
-                increase_per_day = ((i == dt.getDay()-1) ? 0 : 1);
-                dt.setDate(dt.getDate() + increase_per_day);
-                let futureDays = String(dt).slice(0,15);
-                $(".selectDay").append("<option value='" + futureDays + "'>" + futureDays + "</option>");
-            }    
+            let oggi = dt.getDay()
+            for(var i = dt.getDay()-1; i < oggi+1 ; i++){
+                    increase_per_day = ((i == dt.getDay()-1) ? 0 : 1);
+                    dt.setDate(dt.getDate() +increase_per_day);
+                    let futureDays = String(dt).slice(0,15);
+                    if(futureDays.substring(0,3)!="Sun"){
+                        $(".selectDay").append("<option value='" + futureDays + "'>" + futureDays + "</option>");
+                    }
+            }     
         }
+        
     });
 
     function updateAvailableReservations(){ /* Updating the reservation menu for userPage */
@@ -165,7 +170,8 @@
             'SSN': SSN,
             'hour': hour,
             'date':date,
-            'examtype': exams
+            'examtype': exams,
+            'cod_booking':exams+' '+date+' '+hour
         };
 
         $.ajax({
