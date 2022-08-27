@@ -17,7 +17,7 @@
         var increase_per_day = 0;
         if($(".selectDay").children().length > 0 && $(".selectDay").children().length < day.length){
             let oggi = dt.getDay()
-            for(var i = dt.getDay()-1; i < oggi+1 ; i++){
+            for(var i = dt.getDay()-1; i < oggi+2 ; i++){
                     increase_per_day = ((i == dt.getDay()-1) ? 0 : 1);
                     dt.setDate(dt.getDate() +increase_per_day);
                     let futureDays = String(dt).slice(0,15);
@@ -83,8 +83,8 @@
                                     "<td>" + e[key].surname + "</td>" +
                                     "<td>" + e[key].phonenumber + "</td>" +
                                     "<td>" + e[key].SSN + "</td>" +
-                                    "<td>" + e[key].hour + "</td>" +
-                                    "<td>" + e[key].date + "</td>" +
+                                    "<td id='hour'>" + e[key].hour + "</td>" +
+                                    "<td id='date'>" + e[key].date + "</td>" +
                                     "<td><a href='#' id='removeSeat'>Dismiss</a></td>" +
                                   "</tr>"; 
     
@@ -124,10 +124,13 @@
     $(".ReservationBooked").on("click", "#removeSeat", function(){
         var codeReservation = $(this).closest('tbody > tr').find("#codReservation").html();
         var examtype = $(this).closest('tbody > tr').find("#examtype").html();
+        var date = $(this).closest('tbody > tr').find("#date").html();
+        var hour = $(this).closest('tbody > tr').find("#hour").html();
+        var cod_booking = examtype+" "+date+" "+hour;
 
         var data = {
             'codeReservation': codeReservation,
-            'examtype': examtype
+            'cod_booking':cod_booking
         }
 
         $.ajax({
@@ -161,6 +164,7 @@
         var hour = $(".hour").children("option:selected").val();
         var date = $(".selectDay").children("option:selected").val();
         var exams = $(".exams").children("option:selected").val();
+        var cod_booking = exams+" "+date+" "+hour;
 
         var data = {
             'email': sessionStorage.getItem('email'),
@@ -171,7 +175,7 @@
             'hour': hour,
             'date':date,
             'examtype': exams,
-            'cod_booking':exams+' '+date+' '+hour
+            'cod_booking':cod_booking
         };
 
         $.ajax({
@@ -184,7 +188,8 @@
 
             success: function () {
                 // clear form and show a success message
-                alert("Reserved an exam");
+                alert (cod_booking)//("Reserved an exam");
+                console.log(cod_booking)
                 location.reload();
             },
 
