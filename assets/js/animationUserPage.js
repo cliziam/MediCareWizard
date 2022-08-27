@@ -1,6 +1,7 @@
 (function(){
     
     function sessionNameUser(){ /* Return the Session Name User*/
+        alert(sessionStorage.getItem('email'));
         if(sessionStorage.getItem('email')){
             $('#welcome').append("Welcome " + sessionStorage.getItem('email'));
         } else {
@@ -8,7 +9,6 @@
         }
     }
 
-    
     $(".selectDay").one("click", function(){
         var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -111,6 +111,8 @@
         updateAvailableReservations(); /* Updating the reservation menu for userPage */
         showReservationsBooked(); /* Show all reservations by a particular user */
     });
+
+
 
     // log-out functionality
     $(".nav-link").on("click", function(){

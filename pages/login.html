@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css file link with Bootstrap v5.0.2 framework -->
+    <link href="../assets/css/style.css"  rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- set properly the title -->
+    <link rel="icon" href="../assets/img/medicare.ico" type="image/x-icon">
+    <title>MediCareWizard</title>
+    
+</head>
+
+<body>
+
+    <form id="resizedForm" action="#">
+        <div class="mb-3">
+            <a href="../index.html">
+                <img id = "medicareLogo" src="../assets/img/medicareLogo.png" width="555" height="180">
+            </a>
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        
+        <div class="mb-3">
+            <a href="#" id="addUser">New patient? Click here</a>
+        </div>
+        
+        <center>
+            <button type="button" class="btn btn-primary btnSized">Submit</button>
+            <button type="reset" class=" btn-secondary btnSized">Reset</button>
+        </center>
+    </form>
+
+    <script src = "../assets/js/bootstrap.bundle.min.js"></script>
+    <script src = "../assets/plugins/jquery/jquery-3.6.0.min.js"></script>
+    <script src = "../assets/js/animation.js"></script>
+    
+</body>
+
+</html>

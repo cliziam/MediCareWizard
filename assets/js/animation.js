@@ -2,6 +2,8 @@
 
     $(".btn-primary").on("click", function () {
         var BTN = $('.btn-primary').text();
+        var password = $("#exampleInputPassword1").val();
+        sessionStorage.setItem('email', email);
 
         if(BTN.trim() == "Submit") { // check if it means to register or log-in in the userPage
             var email = $("#exampleInputEmail1").val();
@@ -11,7 +13,7 @@
                 email : email,
                 password : password
             };
-      
+
             $.ajax({
                 type: "POST",
                 url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/user",
@@ -20,13 +22,13 @@
                 contentType: "application/json; charset=utf-8",
                 data: JSON.stringify(data),
     
-                success: function (e) {
-                    // clear form and show a success message
-                    console.log(e);
-                    alert("Log-in Success");
-
+                success: function () {
                     // save the session in js
                     sessionStorage.setItem('email', email);
+                    alert(sessionStorage.getItem('email'));//"Log-in Success");
+
+                    // clear form and show a success message
+                    //console.log(e);
                     
                     var url = "https://s3.amazonaws.com/medicarewizard1/pages/userPage.html";
                     $(location).attr('href',url);
@@ -89,5 +91,6 @@
             $(".btn-primary").html("Submit");
         }
     });
+
 
 })();
