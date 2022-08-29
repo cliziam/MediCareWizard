@@ -12,12 +12,19 @@
     $(".selectDay").one("click", function(){
         var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-        let today = new Date()
+        let today = new Date();
         var dt = new Date(today);
         var increase_per_day = 0;
         if($(".selectDay").children().length > 0 && $(".selectDay").children().length < day.length){
-            let oggi = dt.getDay()
-            for(var i = dt.getDay()-1; i < oggi+2 ; i++){
+            let oggi = dt.getDay();
+            //se oggi è sabato o domenica->ciclo=2, altrimenti->ciclo=1
+            if (oggi==0 || oggi==6){
+                var cicli=2;
+            }
+            else {
+                var cicli=1;
+            }
+            for(var i = dt.getDay()-1; i < oggi+cicli ; i++){
                     increase_per_day = ((i == dt.getDay()-1) ? 0 : 1);
                     dt.setDate(dt.getDate() +increase_per_day);
                     let futureDays = String(dt).slice(0,15);
@@ -32,7 +39,7 @@
     function updateAvailableReservations(){ /* Updating the reservation menu for userPage */
         $.ajax({
             type: "GET",
-            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/bookingapp",
+            url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/bookingapp",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -65,7 +72,7 @@
         
         $.ajax({
             type: "POST",
-            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -137,7 +144,7 @@
 
         $.ajax({
             type: "POST",
-            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -182,7 +189,7 @@
 
         $.ajax({
             type: "POST",
-            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",

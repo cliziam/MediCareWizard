@@ -2,12 +2,16 @@
 
     $(".btn-primary").on("click", function () {
         var BTN = $('.btn-primary').text();
-        var password = $("#exampleInputPassword1").val();
-        sessionStorage.setItem('email', email);
+        //var password = $("#exampleInputPassword1").val();
+        //var email = $("#exampleInputEmail1").val();
+        //sessionStorage.setItem('email', email);
 
         if(BTN.trim() == "Submit") { // check if it means to register or log-in in the userPage
             var email = $("#exampleInputEmail1").val();
             var password = $("#exampleInputPassword1").val();
+            sessionStorage.setItem('email', prova);
+            sessionStorage.clear();
+            sessionStorage.setItem('email', email);
 
             var data = {
                 email : email,
@@ -16,7 +20,7 @@
 
             $.ajax({
                 type: "POST",
-                url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/user",
+                url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
@@ -49,7 +53,7 @@
       
             $.ajax({
                 type: "POST",
-                url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/user",
+                url : "https://2ox9k3fr21.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
