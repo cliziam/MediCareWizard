@@ -32,7 +32,7 @@
     function updateAvailableReservations(){ /* Updating the reservation menu for userPage */
         $.ajax({
             type: "GET",
-            url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/bookingapp",
+            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/bookingapp",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -65,7 +65,7 @@
         
         $.ajax({
             type: "POST",
-            url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -118,7 +118,7 @@
     $(".nav-link").on("click", function(){
         sessionStorage.removeItem('email');
 
-        var url = "https://s3.amazonaws.com/medicarewizard1/index.html";
+        var url = "https://s3.amazonaws.com/medicarewizard2/index.html";
         $(location).attr('href',url);
     });
 
@@ -137,7 +137,7 @@
 
         $.ajax({
             type: "POST",
-            url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",
@@ -182,7 +182,7 @@
 
         $.ajax({
             type: "POST",
-            url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/reservation",
+            url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/reservation",
             dataType: "json",
             crossDomain: "true",
             contentType: "application/json; charset=utf-8",

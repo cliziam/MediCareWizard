@@ -16,7 +16,7 @@
 
             $.ajax({
                 type: "POST",
-                url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/user",
+                url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
@@ -30,7 +30,7 @@
                     // clear form and show a success message
                     //console.log(e);
                     
-                    var url = "https://s3.amazonaws.com/medicarewizard1/pages/userPage.html";
+                    var url = "https://s3.amazonaws.com/medicarewizard2/pages/userPage.html";
                     $(location).attr('href',url);
                 },
                 
@@ -49,7 +49,7 @@
       
             $.ajax({
                 type: "POST",
-                url : "https://ayz4y6cie2.execute-api.us-east-1.amazonaws.com/Dev/user",
+                url : "https://0gxl3mmkvb.execute-api.us-east-1.amazonaws.com/Dev/user",
                 dataType: "json",
                 crossDomain: "true",
                 contentType: "application/json; charset=utf-8",
