@@ -23,10 +23,10 @@ users can interact with the website, using indirectly AWS microservices to book,
 delete and modify appointments.
 
 ## **Technologies Used**
-● HTML5 + CSS + (JavaScript+ Jquery) + Bootstrap
-● Amazon S3 Bucket
-● AWS DynamoDB
-● AWS Lambda
-● AWS Identity and Access Management (IAM)
-● Amazon API Gateway
-● Amazon CloudWatch
+● HTML5 + CSS + (JavaScript+ Jquery) + Bootstrap <br>
+● Amazon S3 Bucket<br>
+● AWS DynamoDB<br>
+● AWS Lambda<br>
+● AWS Identity and Access Management (IAM)<br>
+● Amazon API Gateway<br>
+● Amazon CloudWatch<br>
