@@ -10,3 +10,23 @@ service by creating an easy to use, fast and immediate system to satisfy their n
 with the aim of guaranteeing a quality service and short waiting times within our
 diagnostic medical center.
 <center><img src="logo.png" width="500"/></center>
+
+## **Roadmap**
+
+In order to create a secure and scalable solution we decided to use the AWS Cloud
+Platform, which proved to be a valid service for our purpose.
+To allow users to choose, book, delete or modify an appointment, we must provide a
+web interface: to develop this interface we use some technologies such as html, css, js
+and Bootstrap in order to create a responsive website.
+All the features were implemented inside Amazon Web Services as microservices:
+users can interact with the website, using indirectly AWS microservices to book,
+delete and modify appointments.
+
+## **Technologies Used**
+● HTML5 + CSS + (JavaScript+ Jquery) + Bootstrap
+● Amazon S3 Bucket
+● AWS DynamoDB
+● AWS Lambda
+● AWS Identity and Access Management (IAM)
+● Amazon API Gateway
+● Amazon CloudWatch
